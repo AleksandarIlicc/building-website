@@ -1,0 +1,27 @@
+@mixin navLinks {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+@mixin btnTimes {
+  width: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+}
+
+@mixin btnTimesPos {
+  font-size: 2.7rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+
+  @media only screen and (max-width: 37.5em) {
+    top: 4rem;
+  }
+}

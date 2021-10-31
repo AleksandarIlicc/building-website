@@ -1,0 +1,42 @@
+.search {
+  position: relative;
+  font-size: 2rem;
+  width: 60rem;
+  max-width: 100%;
+  height: 6rem;
+
+  @media only screen and (max-width: 37.5em) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    border-top: 3px solid $color-grey;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.9rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 1rem 0.7rem 2rem;
+
+    @media only screen and (max-width: 56.25em) {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      border-radius: 0;
+    }
+
+    @media only screen and (max-width: 31.25em) {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

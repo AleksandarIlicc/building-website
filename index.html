@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Aleksandar Ilic">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Campatibile" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="./sass/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <script defer src="./js/app.js"></script>
+
+    <title></title>
+
+</head>
+
+<body>
+
+    <nav class="nav__main">
+        <div class="nav__logo"><i class="icon__logo fas fa-home"></i><span class="nav__logo--span">real</span>tor.com
+        </div>
+        <ul class="nav__main--links">
+            <div class="indicator"></div>
+            <li class="nav__main--link">
+                <a href="#" class="nav__main--item">Buy</a>
+                <span class="icon__chevron">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
+                <div class="dropdown">
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <h3 class="heading__tertiary mb-small">Home for Sale</h3>
+                            <ul>
+                                <li><a href="#" class="dropdown__item">Palm Springs Homes For Sale</a></li>
+                                <li><a href="#" class="dropdown__item">Palm Springs New Homes Communities</a></li>
+                                <li><a href="#" class="dropdown__item">Palm Springs New Construction and Plans</a>
+                                </li>
+                                <li><a href="#" class="dropdown__item">Palm Springs Foreclosures</a></li>
+                                <li><a href="#" class="dropdown__item">Palm Springs Open Houses</a></li>
+                                <li><a href="#" class="dropdown__item">Senior Housing</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <h3 class="heading__tertiary mb-small">Homes Values</h3>
+                            <ul>
+                                <li><a href="#" class="dropdown__item">Palm Springs Housing Market</a></li>
+                                <li><a href="#" class="dropdown__item">Palm Springs Recently Sold</a></li>
+                                <li><a href="#" class="dropdown__item">Palm Springs Property Records</a>
+                                </li>
+                                <li><a href="#" class="dropdown__item">Home Buying Tips</a></li>
+                                <li><a href="#" class="dropdown__item">Home Selling Tips</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <h3 class="heading__tertiary mb-small">Home for Sale</h3>
+                            <ul>
+                                <li><a href="#" class="dropdown__item">Home Buying Checklist</a></li>
+                                <li><a href="#" class="dropdown__item">Home Buyers Reveal: 'What I Wish I Had Known
+                                        Before Buying My First Home</a></li>
+                                <li><a href="#" class="dropdown__item">First-Time Home Buyer Resource Center</a>
+                                </li>
+                                <li><a href="#" class="dropdown__item">More Home Buying Insights</a></li>
+                                <li><a href="#" class="dropdown__item">Success Stories</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav__main--link">
+                <a href="#" class="nav__main--item">Sell</a>
+                <span class="icon__chevron">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
+                <div class="dropdown">
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <h3 class="heading__tertiary mb-small">Home Selling</h3>
+                            <ul>
+                                <li><a href="#" class="dropdown__item">Seller's Marketplace</a></li>
+                                <li><a href="#" class="dropdown__item">See What Your Home Is Worth</a></li>
+                                <li><a href="#" class="dropdown__item">Learn How To Sell Your Home</a>
+                                </li>
+                                <li><a href="#" class="dropdown__item">How To Select An Agent</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__content">
+                            <h3 class="heading__tertiary mb-small">Homes Selling Tips</h3>
+                            <ul>
+                                <li><a href="#" class="dropdown__item">Selling Your Home? Don't Neglect These 6
+                                        Maintenance Tasks - Or Else</a></li>
+                                <li><a href="#" class="dropdown__item">More Home Selling Insights</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav__main--link"><a href="#" class="nav__main--item">Rent</a></li>
+            <li class="nav__main--link"><a href="#" class="nav__main--item">My Home</a></li>
+            <li class="nav__main--link"><a href="#" class="nav__main--item">News &amp; Insights</a></li>
+
+            <li class="nav__main--link"><a href="#" class="nav__main--item nav__main--item-logIn">Log in</a></li>
+            <li class="nav__main--link"><a href="#" class="nav__main--item nav__main--item-signUp">Sign up</a></li>
+        </ul>
+
+        <div class="icon__nav">
+            <i class="icon__nav--bar fas fa-bars"></i>
+        </div>
+        <div class="progress-bar" id="scroll-bar"></div>
+    </nav>
+
+    <header class="header">
+        <div class="header__content">
+            <h1 class="heading__primary">
+                To each their home.
+            </h1>
+            <h3 class="heading__tertiary mb-medium">
+                Let’s find a home that’s perfect for you
+            </h3>
+                <ul class="header__nav">
+                    <li class="header__nav--link"><a href="#" class="header__nav--item">buy</a></li>
+                    <li class="header__nav--link"><a href="#" class="header__nav--item">rent</a></li>
+                    <li class="header__nav--link"><a href="#" class="header__nav--item">pre-approal</a></li>
+                    <li class="header__nav--link"><a href="#" class="header__nav--item">just sold</a></li>
+                    <li class="header__nav--link"><a href="#" class="header__nav--item">home value</a></li>
+                </ul>
+            <div class="search mt-medium">
+                <input type="text" class="search__input" placeholder="Address, School, City, Zip, Neighborhood">
+                <button class="btn__search">Search</button>
+            </div>
+        </div>
+
+        <div class="btn__scroll">
+            <span class="btn__scroll--span"></span>
+        </div>
+    </header>
+
+    <div class="logIn">
+        <div class="logIn__container">
+            <i class="icon__logIn--times fas fa-times"></i>
+            <h2 class="heading__secondary">Log in or create an account</h2>
+            <form action="#" class="form mt-small">
+                <div class="form__box">
+                    <label for="email" class="form__label mb-small">Email address</label>
+                    <input type="email" id="email" class="form__input" placeholder="Enter your email...">
+                    <div class="btn__form btn__continue">
+                        <span>Continue</span>
+                    </div>
+                </div>
+            </form>
+            <div class="logIn__or">
+                <span>Or</span>
+            </div>
+            <div class="btn__logIn mt-small">
+                <div class="btn__form btn__form--google">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png" class="icon__logIn" />
+                    <span>Continue with google</span>
+                </div>
+                <div class="btn__form btn__form--facebook">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-new.png" class="icon__logIn" />
+                    <span class=" btn__google--text">Continue with facebook</span>
+                </div>
+                <div class="btn__form btn__form--apple">
+                    <img src="https://img.icons8.com/color/48/000000/mac-os--v1.png" class="icon__logIn" />
+                    <span>Continue with apple</span>
+                </div>
+            </div>
+            <div class="logIn__text">
+                <h3 class="heading__tertiary">Are you a real estate agent?</h3>
+                <div><a href="#">Log in</a> or <a href="#">create an account</a> here</div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay overlay--hidden">
+    </div>
+
+    <main>
+
+        <section class="houses">
+
+            <h2 class="heading__secondary--section mb-medium">New Listings in Palm Springs, CA</h2>
+
+            <div class="houses__container">
+
+                <div class="house">
+                    <img src="./img/home-1.jpg" alt="home 1" class="house__img">
+                    <p class="house__new">new - 22 hours ago</p>
+                    <p class="house__price">$335,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">Condo</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">2</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">2</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">1,175</p>
+                    </div>
+                </div>
+
+                <div class="house">
+                    <img src="./img/home-2.jpg" alt="home 2" class="house__img">
+                    <p class="house__new">new - 16 hours ago</p>
+                    <p class="house__price">$1,475,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">New Mexico</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">4</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">4</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">3,195</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-4.jpg" alt="home 4" class="house__img">
+                    <p class="house__new">new - 12 hours ago</p>
+                    <p class="house__price">$2,175,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">San Diego</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">4</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">1</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">3,000</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-5.jpg" alt="home 5" class="house__img">
+                    <p class="house__new">new - 12 hours ago</p>
+                    <p class="house__price">$775,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">Nis, Bubanj</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">2</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">1</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">1,252</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-6.jpg" alt="home 6" class="house__img house__img--6">
+                    <p class="house__new">new - 14 hours ago</p>
+                    <p class="house__price">$375,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">Las Palmas</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">3</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">2</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">1,527</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-7.jpg" alt="home 7" class="house__img">
+                    <p class="house__new">new - 19 hours ago</p>
+                    <p class="house__price">$2,375,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">Oahu</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">6</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">2</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">4,527</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-8.jpg" alt="home 8" class="house__img">
+                    <p class="house__new">new - 22 hours ago</p>
+                    <p class="house__price">$675,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">San Antonio</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">3</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">1</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">927</p>
+                    </div>
+                </div>
+                <div class="house">
+                    <img src="./img/home-9.jpg" alt="home 9" class="house__img">
+                    <p class="house__new">new - 12 hours ago</p>
+                    <p class="house__price">$1,475,000</p>
+                    <i class="house__icon far fa-heart"></i>
+
+                    <div class="house__location">
+                        <i class="house__location--icon fas fa-map-marker-alt"></i>
+                        <p class="house__place">Iguana</p>
+                    </div>
+
+                    <div class="house__bed">
+                        <i class="house__bed--icon fas fa-bed"></i>
+                        <p class="house__bed--num">4</p>
+                    </div>
+
+                    <div class="house__bath">
+                        <i class="house__bath--icon fas fa-bath"></i>
+                        <p class="house__bath--num">2</p>
+                    </div>
+
+                    <div class="house__sqft">
+                        <p class="house__sqft--icon">sqft</p>
+                        <p class="house__sqft--num">2,527</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="architecture">
+
+            <div class="text-center mb-large">
+                <h2 class="heading__secondary--section">Our Architecture</h2>
+            </div>
+
+            <div class="bg-video">
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="./video/istock-666930442_preview.mp4" type="video/mp4">
+                </video>
+                <div class="bg-video__background"></div>
+            </div>
+
+            <button class="btn__archi">See more</button>
+
+            <div class="architecture__text">
+                <i class="icon__archi--times fas fa-times"></i>
+                <h2 class="heading__secondary mb-small">Why Do New Builds Need a Home Warranty?</h2>
+                <p class="para">
+                    First, like with all warranties, the biggest benefit of a home warranty is peace of mind. Though
+                    it’s highly unlikely anything will go wrong with your new build, you also want to relax and enjoy it
+                    as your home.
+
+                    As 2-10 HBW points out, that means letting your family feel free to put normal wear and tear on your
+                    home’s appliances and mechanical systems. Consider that on average, an air conditioner (AC) unit
+                    runs six hours per day.
+
+                    A warranty means that in the unlikely event one of those mechanical systems gets pushed too far too
+                    soon, you’ll have it back up and running with little disruption.
+
+                    Second, if you should experience a breakdown in your new home, a warranty cushions you against
+                    financial stress at a time when you need it most. That significantly lowers your cost of home
+                    ownership in the event something happens.
+                </p>
+
+                <h2 class="heading__secondary mb-small">What Does a Home Warranty Cover on New Builds?</h2>
+
+                <p class="para">
+                    A warranty for a new custom home breaks down to three levels of coverage:
+                </p>
+
+                <ul class="mb-medium">
+                    <li>1-year workmanship warranty.</li>
+                    <li>3-year mechanical systems warranty.</li>
+                    <li>10-year structural warranty.</li>
+                    <li>Here’s a deeper (but not exhaustive) look at each warranty.</li>
+                </ul>
+
+                <div class="architecture__box">
+                    <img src="./img/home-3.jpg" alt="home 1" class="architecture__img">
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nihil
+                        repellendus nulla
+                        inventore dicta fugiat.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="room section">
+
+            <div class="text-center mb-large">
+                <h2 class="heading__secondary--section">Our Rooms</h2>
+            </div>
+
+            <div class="slider">
+                <div class="slide">
+                    <img src="./img/room-1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-5.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-6.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/room-7.jpg" alt="">
+                </div>
+            </div>
+            <button class="icon__slide icon__slide--left"><i class="fas fa-chevron-left"></i></button>
+            <button class="icon__slide icon__slide--right"><i class="fas fa-chevron-right"></i></button>
+
+
+        </section>
+
+        <section class="tabs section">
+            <div class="text-center">
+                <h2 class="heading__secondary--section">Everything as simple as possible, but no simpler.</h2>
+            </div>
+
+            <div class="operations">
+                <div class="operations__tab--container">
+                    <button class="operations__tab operations__tab--1 operations__tab--active"
+                        data-tab="1"><span>1</span>Instant
+                        Transfers</button>
+                    <button class="operations__tab operations__tab--2" data-tab="2"><span>2</span>Instant Loans</button>
+                    <button class="operations__tab operations__tab--3" data-tab="3"><span>3</span>Instant
+                        Closing</button>
+                </div>
+                <div class="operations__content operations__content--1 operations__content--active">
+                    <h2 class="heading__secondary mb-small">
+                        Tranfser money to anyone, instantly! No fees, no BS.
+                    </h2>
+                    <p class="para">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Lorem ipsum dolor sit, amet consectetur 
+                        adipisicing elit. Pariatur nisi error repellat vero tempora dolor. 
+                        Amet consectetur adipisicing elit. Deleniti eaque nobis saepe rerum consequuntur
+                        veritatis error odio repellendus cum est.
+                    </p>
+
+                    <ul>
+                        <li>1-year workmanship warranty.</li>
+                        <li>3-year mechanical systems warranty.</li>
+                        <li>10-year structural warranty.</li>
+                        <li>Here’s a deeper (but not exhaustive) look at each warranty.</li>
+                    </ul>
+                </div>
+                <div class="operations__content operations__content--2">
+                    <h2 class="heading__secondary mb-small">
+                        Buy a home or make your dreams come true, with instant loans.
+                    </h2>
+                    <p class="para">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Nulla, voluptatum! Laborum mollitia iure consectetur dolore, aperiam ut voluptatibus quidem non!
+                    </p>
+                    <p class="para mt-small">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt fugit a voluptatibus culpa
+                        modi nihil nobis eaque laboriosam commodi! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Velit consectetur nostrum eveniet nesciunt iste rerum perspiciatis labore dolorum, quas cupiditate
+                        voluptate voluptates similique. Mollitia, cumque.
+                    </p>
+                </div>
+                <div class="operations__content operations__content--3">
+                    <h2 class="heading__secondary mb-small">
+                        No longer need your account? No problem! Close it instantly.
+                    </h2>
+                    <p class="para">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid est
+                        corrupti consectetur alias qui magnam necessitatibus? Quaerat corrupti iure quasi. Itaque
+                        consequuntur consectetur possimus explicabo est, sunt repellat fugiat nulla. Lorem, ipsum 
+                        dolor sit amet consectetur adipisicing elit. Dignissimos, necessitatibus. Voluptates magnam 
+                        unde voluptas fuga, eligendi quaerat placeat minima asperiores, id impedit maxime sequi in iste 
+                        similique iure minus praesentium!
+                    </p>
+                    <button class="btn__close mt-small">Close</button>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <footer class="footer section">
+
+        <div class="footer__container">
+            <div class="about">
+                <h3 class="heading__tertiary">About Us</h3>
+                <ul class="about__list">
+                    <li>Our Mission</li>
+                    <li>Press</li>
+                    <li>Investors</li>
+                    <li>Blog</li>
+                    <li>Real Estate News</li>
+                </ul>
+            </div>
+            <div class="find">
+                <h3 class="heading__tertiary">Find Us</h3>
+                <ul class="find__list">
+                    <li>Redfin App</li>
+                    <li>Contact Us</li>
+                    <li>Help</li>
+                </ul>
+
+                <div class="find__icons">
+                    <div class="find__icon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="find__icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="find__icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__para">
+                <p>Updated January 2020: By searching, you agree to the Terms of Use, and Privacy Policy.</p>
+                <p>Copyright: © 2021 Redfin. All rights reserved. Patent pending.</p>
+                <p>REDFIN and all REDFIN variants, TITLE FORWARD, WALK SCORE, and the R logos, are trademarks of Redfin
+                    Corporation, registered or pending in the USPTO.</p>
+                <p>If you are using a screen reader, or having trouble reading this website, please call Redfin Customer
+                    Support for help at 1-844-759-7732.</p>
+            </div>
+
+            <div class="footer__map">
+                <h3 class="heading__tertiary">Visit our address &colon;</h3>
+
+                <div class="footer__mapBox" id="map"></div>
+
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            <p class="footer__para">
+              © Copyright by Aleksandar Ilic. Use for practice HTML, CSS and JAVASCRIPT.
+            </p>
+          </div>
+
+    </footer>
+
+</body>
+
+</html>

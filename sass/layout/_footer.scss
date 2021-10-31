@@ -1,0 +1,91 @@
+.footer {
+  padding: 8rem 0 5rem 0;
+  color: $color-white;
+  background: $color-grey;
+
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 5rem;
+
+    & h3 {
+      font-size: 1.9rem;
+      font-weight: 400;
+    }
+
+    & ul {
+      list-style-type: none;
+      font-size: 1.6rem;
+
+      & li:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    & h3 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__para {
+    font-size: 1.2rem;
+
+    & p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    margin-inline: auto;
+
+    &--popup {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &__mapBox {
+    height: 25rem;
+    background: grey;
+  }
+
+  &__copyright {
+    width: 100%;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+
+.find {
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    width: min-content;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(128, 128, 128);
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      background: rgb(85, 85, 85);
+    }
+  }
+}

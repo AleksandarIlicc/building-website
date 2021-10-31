@@ -1,0 +1,80 @@
+.icon {
+  &__logo {
+    color: $color-red;
+    margin-right: 0.7rem;
+  }
+
+  &__logIn {
+    @include btnTimes;
+
+    &--times {
+      @include btnTimesPos;
+    }
+  }
+
+  &__archi {
+    @include btnTimes;
+
+    &--times {
+      @include btnTimesPos;
+    }
+  }
+
+  &__nav {
+    font-size: 2.7rem;
+    display: none;
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: 56.25em) {
+      display: block;
+    }
+  }
+
+  &__chevron {
+    display: none;
+
+    @media only screen and (max-width: 56.25em) {
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-left: 0.7rem;
+      cursor: pointer;
+    }
+  }
+
+  &__slide {
+    font-size: 5rem;
+    position: absolute;
+    top: 59.5%;
+    border: none;
+    background: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @media only screen and (max-width: 37.5em) {
+      font-size: 3.5rem;
+    }
+
+    & .fas {
+      color: rgb(168, 168, 168);
+    }
+
+    &--left {
+      left: 11%;
+
+      @media only screen and (max-width: 48em) {
+        left: 7%;
+      }
+    }
+
+    &--right {
+      right: 11%;
+
+      @media only screen and (max-width: 48em) {
+        right: 7%;
+      }
+    }
+  }
+}
