@@ -357,10 +357,14 @@ body {
   width: 100%;
 }
 
+.dropdown__content li {
+  padding: 0.7rem 0;
+}
+
 @media only screen and (max-width: 56.25em) {
   .dropdown__content li {
+    padding: 0 0 0.6rem 0;
     margin-bottom: 2rem;
-    padding-bottom: 0.6rem;
     border-bottom: 1px solid #e6e6e6;
   }
 }
@@ -369,7 +373,6 @@ body {
   font-size: 1.6rem;
   text-decoration: none;
   color: #3f3f3f;
-  padding: 0.7rem 0;
   position: relative;
 }
 
